@@ -68,41 +68,6 @@ def test(prem,tab):
             return False
     return True
 
-# def chainage_avant(base_fait,base_regle,fait) : 
-    trace = list()
-    tab_fait = list()
-    #creation d'un tableau de fait
-    for ft in base_fait :
-        tab_fait.append(ft.fait)
-
-    while not(in_base(base_fait,fait)):
-        nb_fait = len(tab_fait) #Pour tester si la base de fait est saturée
-        for regle in base_regle:
-
-            prem =regle.premisse
-            if test(prem,tab_fait): #test si la regle est applicable
-                for k in range(0,len(regle.conclusion)):
-                    base_fait.append(
-                        Fait(
-                            regle.conclusion[k],
-                            regle.regle
-                        )
-                    )
-                    tab_fait.append(regle.conclusion[k].strip())
-                trace.append(regle.regle)
-                # print trace in file trace
-                base_regle.remove(regle)
-                #print(tab_fait)
-                break
-        if nb_fait == len(tab_fait):
-            break 
-    if fait in tab_fait:
-        print(fait + " établi")
-    else :
-        print(fait + " non-établi")
-
-    return trace
-
 def print_base_f(base):
     for index in range (0, len(base)):
         base[index].print_fait()
