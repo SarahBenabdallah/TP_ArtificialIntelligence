@@ -1,0 +1,16 @@
+r1:si mange_viande alors carnivore
+r2:si dents_pointues et griffes et yeux_avant alors carnivore
+r3:si mange_herbe alors non carnivore
+r4:si mammifere et sabots alors ongule
+r5:si mammifere et rumine alors ongule
+r6:si mammifere et carnivore et brun et taches alors guepard
+r7:si mammifere et carnivore et brun et raies alors tigre
+r8:si ongule et long_cou et longues_pattes et taches alors girafe
+r9:si ongule et raies alors zebre
+r10:si oiseau et long_cou et longues_pattes et noir_et_blanc et non vole alors autruche
+r11:si oiseau et nage et noir_et_blanc et non vole alors pingouin
+r12:si oiseau et vole alors albatros
+r13:si poils alors mammifere
+r14:si lait alors mammifere
+r15:si plumes alors oiseau
+r16:si vole et pond_oeufs alors oiseau
